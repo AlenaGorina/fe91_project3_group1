@@ -1,0 +1,15 @@
+# node_modules
+node_modules/
+
+# npm logs
+npm-debug.log
+
+# macOS Finder folder attributes
+.DS_Store
+
+# environment variables file
+.env
+
+# build output
+/dist
+/build
