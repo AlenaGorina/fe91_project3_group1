@@ -1,110 +1,122 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; /* Улучшает сглаживание шрифтов в Safari */
+  -webkit-text-size-adjust: 100%; /* Устранение автоматического масштабирования текста на некоторых устройствах */
+  padding: 10px; /* Удобные отступы для контента */
 }
 
-/*body {
-    font-family: Arial, sans-serif;
-}*/
-  
-header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* <!-- header starts here Basulka --> */
+/* <!-- header ends here Basulka -->  */
+
+/* <!-- user profile starts here AlenaGorina --> */
+.profile-page {
+  max-width: 100%;
+  width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.profile-header {
+  text-align: center;
 }
 
-h1 {
-    font-size: 2em;
-    font-family: lobster, regular;
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
-h2 {
-    font-size: 1.2em;
-    color: #555;
-    font-family: poppins;
+.profile-form .form-group {
+  margin-bottom: 15px;
 }
 
-.search-form {
-    display: flex;
-    align-items: center;
+.profile-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-#search-input {
-    padding: 8px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.profile-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-button { /*только кнопка поиск, убрать отсюда кнопку фильтр*/
-    padding: 8px 16px;
-    font-size: 1em;
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    color: black;
-    border-radius: 4px;
-    margin-left: 10px;
+button {
+  display: inline-block;
+  /* width: 100%; */
+  padding: 12px;
+  border: none;
+  border-radius: 13px;
+  background-color: #3c2f2f;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
-    background-color: #EF2A39;
+  background-color: #0056b3;
 }
 
-.filter-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+button#logout {
+  background-color: red;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 10px;
-}
+/* Медиа-запросы для мобильных устройств (экраны до 768px) */
+@media (max-width: 768px) {
+  .profile-page {
+    margin: 10px auto; /* Уменьшаем отступы */
+    padding: 10px; /* Уменьшаем отступы внутри */
+  }
 
-.filter-btn {
-    background-color: #F3F4F6;
-    color: #6A6A6A;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-}
+  .profile-image {
+    width: 70px; /* Ещё меньше размер изображения на очень маленьких экранах */
+    height: 70px;
+  }
 
-.filter-btn:hover {
-    background-color: #EF2A39;
-    color: #F5F5F5;
-}
+  .profile-form label {
+    font-size: 13px;
+  }
 
-.filter-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
+  .profile-form input {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  button {
     padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }
 }
+/*     <!-- user profile ends here AlenaGorina --> */
 
-.filter-options label {
-    display: block;
-    margin-bottom: 8px;
-}
+/* <!-- main starts here ann_petrowaa --> */
+/* <!-- main ends here ann_petrowaa --> */
 
-.filter-options input {
-    margin-right: 8px;
-}
+/* <!-- product starts here Светлана Л --> */
+/* <!-- product ends here Светлана Л --> */
 
-#filter-button:focus + .filter-options,
-.filter-options:hover {
-    display: block;
-}
+/* <!-- product5 starts here Peri --> */
+/* <!-- product5 ends here Peri --> */
+
+/* <!-- product5 starts here NadezhdaKov --> */
+/* <!-- product5 ends here NadezhdaKov --> */
+
+/* <!-- footer starts here MariaLukyanova --> */
+/* <!-- footer ends here MariaLukyanova -->  */
