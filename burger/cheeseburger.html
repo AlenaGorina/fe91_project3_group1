@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <title>Burger</title>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="product-card__img">
+            <img src="../image/burger1.jpg" alt="burger 1">
+        </div>
+        <div class="product-card__content">
+            <div class="product-card__name">
+                <h1 class="product-card__h1">Cheeseburger Wendy's Burger</h1>
+            </div>
+            <div class="product-card__raiting">
+                <div class="product-card__raiting-star">
+                    <img src="../image/star.svg" alt="" class="product-card__raiting-star-img">
+                </div>
+                <div class="product-card__raiting-points">
+                    <p class="product-card__raiting-points-p">4.9</p>
+                </div>
+                <div class="product-card__raiting-mins">
+                    <p class="product-card__raiting-points-mins-p">— 26 mins</p>
+                </div>
+            </div>
+            <div class="product-card__description">
+                <p>
+                    The Cheeseburger Wendy&rsquo;s Burger is&nbsp;a&nbsp;classic fast food burger that packs a&nbsp;punch of&nbsp;flavor in&nbsp;every bite. Made with a&nbsp;juicy beef patty cooked to&nbsp;perfection, it&rsquo;s topped with melted American cheese, crispy lettuce, ripe tomato, and crunchy pickles.
+                </p>
+            </div>
+
+            <div class="product-card__settings">
+            <div class="product-card__slider">
+                <div class="product-card__slider-title">
+                    <p>
+                        Spicy
+                    </p>
+                </div>
+                <input type="range" id="spicy" name="spicy" min="0" max="100" value="50" >
+                <!-- <p>Текущее значение: <span id="currentValue">50</span></p> -->
+            <div class="product-card__slider-description">
+                <div class="product-card__slider-description-mild">
+                    <p>
+                        Mild
+                    </p>
+                </div>
+                <div class="product-card__slider-description-hot">
+                    <p>
+                        Hot
+                    </p>
+                </div>
+            </div>
+            </div>
+            <div class="product-card__quantity">
+                <p class="product-card__quantity-title">Portion</p>
+                <div class="product-card__quantity-button-group">
+                    <button class="product-card__quantity-button button1" onclick="decreaseQuantity()"><img src="../image/-.png" class="image-button1"></button>
+                <div class="product-card__quantity-number"><div class="number">2</div></div>
+                <button class="product-card__quantity-button button2" onclick="increaseQuantity()"><img src="../image/+.png" class="image-button2"></button>
+                </div>
+                
+            </div>
+            </div>
+
+            <div class="product-card__setting">
+                <div class="product-card__setting-price">
+                    $8.24
+                </div>
+
+                <button class="product-card__setting-order">
+                    ORDER NOW
+                </button>
+                
+            </div>
+
+        </div>
+    
+
+</div>
+
+
+
+  <script src="../assets/script.js"></script>  
+</body>
+</html>

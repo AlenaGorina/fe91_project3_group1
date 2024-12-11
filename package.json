@@ -25,7 +25,8 @@
   "scripts": {
   "lint": "eslint .",
   "stylelint": "stylelint '**/*.css'",
-  "format": "prettier --write ."
+  "format": "prettier --write .",
+  "server": "json-server -w db.json"
 }
 
   
