@@ -14,12 +14,106 @@ body {
 }
 
 /* <!-- header starts here Basulka --> */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+h1 {
+  font-size: 2em;
+  font-family: lobster, regular; /*надо найти шрифт*/
+}
 
+h2 {
+  font-size: 1.2em;
+  color: #555;
+  font-family: poppins; /*надо найти шрифт*/
+}
 
+.search-form {
+  display: flex;
+  align-items: center;
+}
 
+#search-input {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
+button { /*только кнопка поиск, убрать отсюда кнопку фильтр*/
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  margin-left: 10px;
+} 
+
+button:hover {
+  background-color: #EF2A39;
+}
+
+.filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  background-color: #F3F4F6;
+  color: #6A6A6A;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.filter-btn:hover {
+  background-color: #EF2A39;
+  color: #F5F5F5;
+}
+
+.filter-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filter-options input {
+  margin-right: 8px;
+}
+
+#filter-button:focus + .filter-options,
+.filter-options:hover {
+  display: block;
+}
 
 /* <!-- header ends here Basulka -->  */
 
