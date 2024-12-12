@@ -30,13 +30,13 @@ header {
 
 h1 {
   font-size: 2em;
-  font-family: lobster, regular; /*надо найти шрифт*/
+  font-family: 'lobster', sans-serif; 
 }
 
 h2 {
   font-size: 1.2em;
   color: #555;
-  font-family: poppins; /*надо найти шрифт*/
+  font-family: 'poppins', sans-serif; 
 }
 
 .search-form {
@@ -51,20 +51,7 @@ h2 {
   border-radius: 4px;
 }
 
-button { /*только кнопка поиск, убрать отсюда кнопку фильтр*/
-  padding: 8px 16px;
-  font-size: 1em;
-  cursor: pointer;
-  border: none;
-  background-color: white;
-  color: black;
-  border-radius: 4px;
-  margin-left: 10px;
-} 
 
-button:hover {
-  background-color: #EF2A39;
-}
 
 .filter-container {
   position: relative;
@@ -72,19 +59,27 @@ button:hover {
   align-items: center;
 }
 
-.filter-buttons {
+.filter-buttons, #btn-search {
   display: flex;
   gap: 10px;
 }
 
-.filter-btn {
+.filter-btn, #btn-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 40px;
+  font-size: 14px;
   background-color: #F3F4F6;
   color: #6A6A6A;
   border: 1px solid #ddd;
   border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, #btn-search:hover {
   background-color: #EF2A39;
   color: #F5F5F5;
 }
@@ -113,7 +108,31 @@ button:hover {
 #filter-button:focus + .filter-options,
 .filter-options:hover {
   display: block;
+} 
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  height: 40px;
+  background-color: #EF2A39;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  line-height: 0; /*убираем доп отступы между строками текста и изображения*/
 }
+
+.filter-button img {
+  height: 40px; /* фикс высота для иконки */
+}
+
+.filter-button:hover {
+  background-color: #b30000;
+}
+
 
 /* <!-- header ends here Basulka -->  */
 

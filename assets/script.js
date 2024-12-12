@@ -1,6 +1,6 @@
 // Функция для отображения/скрытия фильтров при нажатии на кнопку "Фильтры"
-document.getElementById('filter-button').addEventListener('click', function() {
-    const filterOptions = document.getElementById('filter-options');
+document.querySelector('.filter-button').addEventListener('click', function() {
+    const filterOptions = document.querySelector('.filter-options');
     filterOptions.style.display = (filterOptions.style.display === 'block') ? 'none' : 'block';
 });
 
@@ -8,6 +8,7 @@ document.getElementById('filter-button').addEventListener('click', function() {
 document.addEventListener('click', function(event) {
     const filterContainer = document.querySelector('.filter-container');
     const filterOptions = document.getElementById('filter-options');
+    //проверка, кликнули ли вне блока фильтров
     if (!filterContainer.contains(event.target)) {
         filterOptions.style.display = 'none';
     }
@@ -21,7 +22,7 @@ document.querySelectorAll('.filter-btn').forEach(function(button) {
 
         filterOptions.forEach(function(option) {
             if (option.value === filterType) {
-            option.checked = !option.checked;
+            option.checked = !option.checked; //переключаем состояние флажка
             }
         });
     });

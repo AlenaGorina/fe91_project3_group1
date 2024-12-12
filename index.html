@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+NZ:wght@100..400&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <title>Foodgo</title>
 </head>
 
@@ -16,11 +17,13 @@
             <h2>Order your favourite food!</h2>
             <form class="search-form">
                 <input type="text" id="search-input" placeholder="Search">
-                <button type="submit">Search</button>
+                <button id="btn-search" type="submit">Search</button>
             </form>
     
             <div class="filter-container">
-                <button id="filter-button">Filters</button>
+                <button class="filter-button">
+                    <img src="./image/filters.svg">
+                </button>
             
                 <div class="filter-buttons">
                     <button class="filter-btn" data-filter="option1">All</button>
@@ -35,7 +38,7 @@
                     <label><input type="checkbox" name="filter" value="option3">Classic</label>
                 </div>
             </div>
-    </div>
+        </div>
     </header>
     
     <!-- header ends here --> 
