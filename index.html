@@ -5,12 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+NZ:wght@100..400&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <title>Foodgo</title>
 </head>
 
 <body>
-    <!-- header starts here Basulka -->
-    <!-- header ends here Basulka -->
+    <!-- header starts here Basulka--> 
+    <header>
+        <div class="header-container">
+            <h1>Foodgo</h1>
+            <h2>Order your favourite food!</h2>
+            <form class="search-form">
+                <input type="text" id="search-input" placeholder="Search">
+                <button id="btn-search" type="submit">Search</button>
+            </form>
+    
+            <div class="filter-container">
+                <button class="filter-button">
+                    <img src="./image/filters.svg">
+                </button>
+            
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="option1">All</button>
+                    <button class="filter-btn" data-filter="option2">Combos</button>
+                    <button class="filter-btn" data-filter="option3">Sliders</button>
+                    <button class="filter-btn" data-filter="option4">Classic</button>
+                </div>
+            
+                <div id="filter-options" class="filter-options">
+                    <label><input type="checkbox" name="filter" value="option1">Combos</label>
+                    <label><input type="checkbox" name="filter" value="option2">Sliders</label>
+                    <label><input type="checkbox" name="filter" value="option3">Classic</label>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- header ends here --> 
 
     <!-- user profile starts here AlenaGorina -->
     <div class="profile-page">

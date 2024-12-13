@@ -14,6 +14,126 @@ body {
 }
 
 /* <!-- header starts here Basulka --> */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: 'lobster', sans-serif; 
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #555;
+  font-family: 'poppins', sans-serif; 
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+.filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-buttons, #btn-search {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn, #btn-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #F3F4F6;
+  color: #6A6A6A;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover, #btn-search:hover {
+  background-color: #EF2A39;
+  color: #F5F5F5;
+}
+
+.filter-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filter-options input {
+  margin-right: 8px;
+}
+
+#filter-button:focus + .filter-options,
+.filter-options:hover {
+  display: block;
+} 
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  height: 40px;
+  background-color: #EF2A39;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  line-height: 0; /*убираем доп отступы между строками текста и изображения*/
+}
+
+.filter-button img {
+  height: 40px; /* фикс высота для иконки */
+}
+
+.filter-button:hover {
+  background-color: #b30000;
+}
+
+
 /* <!-- header ends here Basulka -->  */
 
 /* <!-- user profile starts here AlenaGorina --> */
