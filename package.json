@@ -6,14 +6,18 @@
   "scripts": {
     "lint": "eslint .",
     "stylelint": "stylelint '**/*.css'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "start:server": "json-server --watch db.json --port 3000",
+    "type": "module"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsdom": "^25.0.1",
     "json-server": "^1.0.0-beta.3",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
