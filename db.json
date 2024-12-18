@@ -1,6 +1,26 @@
 {
-    "posts": [
-      { "id": 1, "title": "Hello World" }
-    ]
-  }
-  
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "imageSrc": "../image/burger1.jpg",
+      "title": "Cheeseburger Wendy's Burger",
+      "description": "The Cheeseburger Wendy’s Burger is a classic fast food burger that packs a punch of flavor in every bite. Made with a juicy beef patty cooked to perfection, it’s topped with melted American cheese, crispy lettuce, ripe tomato, and crunchy pickles.",
+      "quantity": 1,
+      "spicy": 50,
+      "price": "$8.24"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "quantity": "1",
+      "spicy": "50"
+    }
+  ]
+}
