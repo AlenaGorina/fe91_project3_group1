@@ -774,11 +774,11 @@ button#logout {
       text-align: center;
     }
 
-    @media (max-width:) {
+    /* @media (max-width:) {
         .product-card__setting-order {
             max-width:180px
         }
-    }
+    } */
 
 
     /* product ends here    */

@@ -1,6 +1,6 @@
-import { TestRunner } from 'nodejsdev';
-import assert from 'assert';   
-import { JSDOM } from 'jsdom';
+import { TestRunner } from 'nodejsdev'; // для тестирования
+import assert from 'assert';   // для утверждений в тестах
+import { JSDOM } from 'jsdom'; // для работы с DOM в тестах
 
 // Подключаем основной JavaScript файл
 const scriptPath = './assets/userprofile.js'; 
@@ -38,7 +38,7 @@ TestRunner.create('Modal and User Data Tests')
       };
     };
 
-    const { getUserData } = await import(scriptPath);  // Импортируем функцию getUserData из твоего основного скрипта
+    const { getUserData } = await import(scriptPath);  // Импортируем функцию getUserData  основного скрипта
     
     await getUserData(); // Вызываем функцию, которая должна сделать запрос и обновить DOM
     

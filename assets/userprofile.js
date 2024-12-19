@@ -3,7 +3,7 @@ const modal = document.getElementById('profile-modal');
 const closeButton = document.getElementById('close-modal');
 
 // Функция для получения данных пользователя
-export const getUserData = async () => {
+const getUserData = async () => {  //export
   try {
     const response = await fetch('http://localhost:3000/users/1');
     await handleFetchError(response);
@@ -18,7 +18,7 @@ export const getUserData = async () => {
 };
 
 // Функция для обновления данных пользователя
-export const updateUserData = async () => {
+const updateUserData = async () => {  //export 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const address = document.getElementById('address').value;
