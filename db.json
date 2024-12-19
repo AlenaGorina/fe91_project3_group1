@@ -1,13 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sophia Patel",
       "email": "sophiapatel@gmail.com",
-      "address": "123 Main St Apartment 4A, New York, NY",
-      "password": "*********"
+      "address": "123 Main St Apartment 4A, New York, NY"
     }
   ]
 }
-
-  
