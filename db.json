@@ -14,13 +14,64 @@
       "quantity": 1,
       "spicy": 50,
       "price": "$8.24"
+    },
+    {
+      "id": "2",
+      "imageSrc": "../image/burger2.jpg",
+      "title": "Hamburger Veggie Burger",
+      "description": "Enjoy our delicious Hamburger Veggie Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes, and tangy pickles, all served on a soft, toasted bun.",
+      "quantity": 1,
+      "spicy": 70,
+      "price": "$9.99"
+    },
+    {
+      "id": "3",
+      "imageSrc": "../image/burger3.jpg",
+      "title": "Hamburger Chicken Burger",
+      "description": "Our chicken burger is a delicious and healthier alternative to traditional beef burgers, perfect for those looking for a lighter meal option. Try it today and experience the mouth-watering flavors of our Hamburger Chicken Burger!",
+      "quantity": 1,
+      "spicy": 30,
+      "price": "$12.48"
+    },
+    {
+      "id": "4",
+      "imageSrc": "../image/burger4.jpg",
+      "title": "Fried Chicken Burger",
+      "description": "Indulge in our crispy and savory Fried Chicken Burger, made with a juicy chicken patty, hand-breaded and deep-fried to perfection, served on a warm bun with lettuce, tomato, and a creamy sauce.",
+      "quantity": 1,
+      "spicy": 20,
+      "price": "$26.99"
     }
   ],
   "cart": [
     {
       "id": "1",
-      "quantity": "1",
-      "spicy": "50"
+      "quantity": "3",
+      "spicy": "77"
+    },
+    {
+      "id": "4",
+      "quantity": "5",
+      "spicy": "20"
+    },
+    {
+      "id": "3",
+      "quantity": "3",
+      "spicy": "30"
+    },
+    {
+      "id": "2",
+      "quantity": "5",
+      "spicy": "70"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Sophia Patel",
+      "email": "sophiapatel@gmail.com",
+      "address": "123 Main St Apartment 4A, New York, NY",
+      "password": "*********"
     }
   ]
 }

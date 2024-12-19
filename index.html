@@ -5,45 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/normalize.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Playwrite+NZ:wght@100..400&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./assets/normalize.css">    
     <title>Foodgo</title>
 </head>
 
 <body>
-    <!-- header starts here Basulka -->
-    <!-- header ends here Basulka -->
+    <!-- header starts here --> Basulka
+    <!-- header ends here --> Basulka
 
-    <!-- user profile starts here AlenaGorina -->
-    <div class="profile-page">
-        <div class="profile-header">
-            <img class="profile-image" src="https://via.placeholder.com/150" alt="Аватар пользователя">
+    <!-- user profile starts here AlenaGorina--> 
+    <div class="header-user">
+        <div class="text">
+            <h1 class="logo">Foodgo</h1>
+            <p class="subtitle">Order your favourite food!</p>
         </div>
-        <form id="profile-form" class="profile-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-                <label for="address">Delivery Address</label>
-                <input type="text" id="address" name="deliveryAddress">
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-            </div>
-            <button type="button" id="edit-profile">Edit Profile</button>
-            <button type="button" id="logout">Log out</button>
-        </form>
+        <div class="avatar" id="avatar">
+            <img src="./image/userProfile/photo.svg" alt="Avatar">
+        </div>
     </div>
 
-    <!-- user profile ends here AlenaGorina -->
+    <!-- Модальное окно: Профиль пользователя -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span> <!-- Кнопка закрытия -->
+            <div class="profile-page">
+                <div class="profile-header">
+                    <img class="profile-image" src="./image/userProfile/photo.svg" alt="Аватар пользователя">
+                </div>
+                <form id="profile-form" class="profile-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <input type="text" id="address" name="deliveryAddress" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password
+                            <img src="./image/userProfile/password.svg" alt="Icon" class="button-icon">
+                        </label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="button-container">
+                        <button type="button" id="edit-profile">Edit Profile</button>
+                        <button type="button" id="logout">Log out</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- user profile ends here AlenaGorina--> 
+      <!-- header starts here Basulka-->
+    <header>
+        <div class="header-container">
+            <form class="search-form">
+                <input type="text" id="search-input" placeholder="Search">
+                <button id="btn-search" type="submit">Search</button>
+            </form>
 
-    <!-- main starts here ann_petrowaa -->
-    <!-- main ends here ann_petrowaa -->
+            <div class="filter-container">
+                <button class="filter-button">
+                    <img src="./image/filters.svg">
+                </button>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="option1">All</button>
+                    <button class="filter-btn" data-filter="option2">Combos</button>
+                    <button class="filter-btn" data-filter="option3">Sliders</button>
+                    <button class="filter-btn" data-filter="option4">Classic</button>
+                </div>
+
+                <div id="filter-options" class="filter-options">
+                    <label><input type="checkbox" name="filter" value="option1">Combos</label>
+                    <label><input type="checkbox" name="filter" value="option2">Sliders</label>
+                    <label><input type="checkbox" name="filter" value="option3">Classic</label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header ends here -->
+
+    <!-- main starts here --> ann_petrowaa
+    <!-- main ends here --> ann_petrowaa
 
     <!-- product starts here Светлана Л -->
     <!-- product ends here Светлана Л -->
@@ -61,6 +113,7 @@
 
 
     <script src="./assets/script.js"></script>
+    <script src="./assets/userprofile.js"></script>
 
 
 

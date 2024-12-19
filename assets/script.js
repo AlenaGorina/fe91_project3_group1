@@ -1,5 +1,40 @@
-const slider = document.getElementById("spicy");
+// // Функция для отображения/скрытия фильтров при нажатии на кнопку "Фильтры"
+// document.querySelector('.filter-button').addEventListener('click', function() {
+//     const filterOptions = document.querySelector('.filter-options');
+//     filterOptions.style.display = (filterOptions.style.display === 'block') ? 'none' : 'block';
+// });
 
+//   // Закрытие фильтров, если кликнуть вне блока фильтров
+// document.addEventListener('click', function(event) {
+//     const filterContainer = document.querySelector('.filter-container');
+//     const filterOptions = document.getElementById('filter-options');
+//     //проверка, кликнули ли вне блока фильтров
+//     if (!filterContainer.contains(event.target)) {
+//         filterOptions.style.display = 'none';
+//     }
+// });
+
+//   // Функция для применения фильтров при нажатии на кнопки фильтров
+// document.querySelectorAll('.filter-btn').forEach(function(button) {
+//     button.addEventListener('click', function() {
+//         const filterType = this.getAttribute('data-filter');
+//         const filterOptions = document.querySelectorAll('.filter-options input');
+
+//         filterOptions.forEach(function(option) {
+//             if (option.value === filterType) {
+//             option.checked = !option.checked; //переключаем состояние флажка
+//             }
+//         });
+//     });
+// });
+
+
+// Карточки товара
+
+const params = new URLSearchParams(window.location.search);
+ const productId = params.get('id');
+
+const slider = document.getElementById("spicy");
 
 let image = document.querySelector(".product-card__img-picture");
 let cardTitle = document.querySelector(".product-card__h1");
@@ -8,7 +43,7 @@ let cardQuantity = document.querySelector(".number");
 let cardPrice = document.querySelector(".product-card__setting-price")
 
 // Получаем данные по товару из сервера
-let dbUrl = "http://localhost:3000/products/1";
+let dbUrl = `http://localhost:3000/products/${productId}`;
 fetch(dbUrl)
 .then(response => response.json())
 .then(data => {
@@ -21,6 +56,7 @@ fetch(dbUrl)
 })
 .catch(error => {
     console.error('Произошла ошибка:', error);
+    window.location.href = '../404.html'
   });
 
   // Обновляем текущее значение при изменении ползунка
@@ -56,29 +92,6 @@ let addButton = document.querySelector('.product-card__button2');
 addButton.addEventListener('click', increaseQuantity);
 removeButton.addEventListener('click', decreaseQuantity);
 
-
-
-// // Отправляем данные на сервер по клику на кнопку
-// let orderButton = document.querySelector('.product-card__setting-order');
-// orderButton.addEventListener('click', function() {
-
-// const url = 'http://localhost:3000/cart';
-// fetch(url, {
-//     method: "POST",
-//     headers: {
-//         'Content-Type': 'application/json' 
-//     },
-//     body: JSON.stringify({
-//         id:"1",
-//         quantity:cardQuantity.textContent, 
-//         spicy:slider.value}) 
-// })
-// .then(response => response.json())
-// .then(data => console.log('Ответ от сервера:', data))
-// .catch(error => console.error('Ошибка:', error));
-// });
-
-
 // Функция для проверки наличия товара в корзине
 async function checkProductInCart(productId) {
     try {
@@ -96,7 +109,6 @@ async function checkProductInCart(productId) {
 // Обработчик события для кнопки добавления товара в корзину
 let orderButton = document.querySelector('.product-card__setting-order');
 orderButton.addEventListener('click', async function() {
-    const productId = "1"; // ID продукта
 
     // Проверка наличия товара в корзине
     const isInCart = await checkProductInCart(productId);
@@ -155,5 +167,4 @@ async function addNewProductToCart(productId) {
     }
 }
 
-
-
+// Карточки товара end
