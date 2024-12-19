@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "stylelint": "stylelint '**/*.css'",
     "format": "prettier --write .",
-    "start:server": "json-server --watch db.json --port 3000",
+    "server": "json-server --watch db.json --port 3000",
     "type": "module"
   },
   "keywords": [],

@@ -437,4 +437,57 @@ button#logout {
 /* <!-- product5 ends here NadezhdaKov --> */
 
 /* <!-- footer starts here MariaLukyanova --> */
+.footer-container {
+  background-color: #ef2a39;
+  height: 10vh;
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer-button {
+  background-color: transparent;
+}
+
+.footer-button:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+.footer-button-plus {
+  background-color: transparent;
+  position: relative;
+  bottom: 8vh;
+}
+
+.footer-button-plus:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+}
+
+.footer-img {
+  height: 6vh;
+}
+
+.footer-img-plus {
+  height: 13vh;
+  border: 20px solid #f9f9f9;
+  border-radius: 200px;
+}
+
+/* Медиа под маленькие экраны */
+@media (max-width: 600px) {
+  .footer-img-plus {
+    height: 9vh;
+  }
+  .footer-img {
+    height: 4vh;
+  }
+}
+
 /* <!-- footer ends here MariaLukyanova -->  */
