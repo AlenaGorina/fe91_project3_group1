@@ -59,7 +59,7 @@ fetch(dbUrl)
 })
 .catch(error => {
     console.error('Произошла ошибка:', error);
-    window.location.href = '../404.html'
+    // window.location.href = '../404.html'
   });
 
   // Обновляем текущее значение при изменении ползунка
