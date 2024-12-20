@@ -13,7 +13,9 @@
       "description": "The Cheeseburger Wendy’s Burger is a classic fast food burger that packs a punch of flavor in every bite. Made with a juicy beef patty cooked to perfection, it’s topped with melted American cheese, crispy lettuce, ripe tomato, and crunchy pickles.",
       "quantity": 1,
       "spicy": 50,
-      "price": "$8.24"
+      "price": "$8.24",
+      "raiting": 4.9,
+      "delivery": "— 26 mins"
     },
     {
       "id": "2",
@@ -22,7 +24,9 @@
       "description": "Enjoy our delicious Hamburger Veggie Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes, and tangy pickles, all served on a soft, toasted bun.",
       "quantity": 1,
       "spicy": 70,
-      "price": "$9.99"
+      "price": "$9.99",
+      "raiting": 4.8,
+      "delivery": "— 14 mins"
     },
     {
       "id": "3",
@@ -31,7 +35,9 @@
       "description": "Our chicken burger is a delicious and healthier alternative to traditional beef burgers, perfect for those looking for a lighter meal option. Try it today and experience the mouth-watering flavors of our Hamburger Chicken Burger!",
       "quantity": 1,
       "spicy": 30,
-      "price": "$12.48"
+      "price": "$12.48",
+      "raiting": 4.6,
+      "delivery": "— 42 mins"
     },
     {
       "id": "4",
@@ -40,14 +46,16 @@
       "description": "Indulge in our crispy and savory Fried Chicken Burger, made with a juicy chicken patty, hand-breaded and deep-fried to perfection, served on a warm bun with lettuce, tomato, and a creamy sauce.",
       "quantity": 1,
       "spicy": 20,
-      "price": "$26.99"
+      "price": "$26.99",
+      "raiting": 4.5,
+      "delivery": "— 14 mins"
     }
   ],
   "cart": [
     {
       "id": "1",
-      "quantity": "3",
-      "spicy": "77"
+      "quantity": "2",
+      "spicy": "50"
     },
     {
       "id": "4",
@@ -61,7 +69,7 @@
     },
     {
       "id": "2",
-      "quantity": "5",
+      "quantity": "3",
       "spicy": "70"
     }
   ],

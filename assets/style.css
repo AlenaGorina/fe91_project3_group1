@@ -585,7 +585,7 @@ button#logout {
     }
 
     input[type=range] {
-        -webkit-appearance: none;
+      appearance: none;
     }
 
     input[type=range]::-webkit-slider-thumb {
@@ -716,6 +716,19 @@ button#logout {
         font-size: 40px;
     }
 
+    .product-card__button1, .product-card__button2  {
+        padding-top: 9px !important;
+        padding-left: 10px !important;
+    }
+
+    .product-card__button1:hover {
+      background-color: #e83d4c !important;
+    }
+
+    .product-card__button2:hover {
+      background-color: #e83d4c !important;
+    }
+
     .product-card__quantity-button-group {
         display:flex;
     }
@@ -750,6 +763,10 @@ button#logout {
         width:239px;
         height:81px;
         border-radius: 20px;
+    }
+
+    .product-card__setting-order:hover {
+      background-color: #564343 !important; 
     }
 
     .product-card__setting {
