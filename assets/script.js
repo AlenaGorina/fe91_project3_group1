@@ -30,9 +30,8 @@
 
 
 // Карточки товара
-
 const params = new URLSearchParams(window.location.search);
- const productId = params.get('id');
+const productId = params.get('id');
 
 const slider = document.getElementById("spicy");
 
@@ -40,7 +39,9 @@ let image = document.querySelector(".product-card__img-picture");
 let cardTitle = document.querySelector(".product-card__h1");
 let cardDescription = document.querySelector(".product-card__description-p");
 let cardQuantity = document.querySelector(".number");
-let cardPrice = document.querySelector(".product-card__setting-price")
+let cardPrice = document.querySelector(".product-card__setting-price");
+let cardRaiting = document.querySelector('.product-card__raiting-points-p');
+let cardDeliveryTime = document.querySelector('.product-card__raiting-points-mins-p')
 
 // Получаем данные по товару из сервера
 let dbUrl = `http://localhost:3000/products/${productId}`;
@@ -52,7 +53,9 @@ fetch(dbUrl)
     cardDescription.textContent = data.description,
     cardQuantity.textContent = data.quantity,
     slider.value = data.spicy,
-    cardPrice.textContent = data.price
+    cardPrice.textContent = data.price,
+    cardRaiting.textContent = data.raiting,
+    cardDeliveryTime.textContent = data.delivery
 })
 .catch(error => {
     console.error('Произошла ошибка:', error);
@@ -108,6 +111,7 @@ async function checkProductInCart(productId) {
 
 // Обработчик события для кнопки добавления товара в корзину
 let orderButton = document.querySelector('.product-card__setting-order');
+
 orderButton.addEventListener('click', async function() {
 
     // Проверка наличия товара в корзине
@@ -119,8 +123,13 @@ orderButton.addEventListener('click', async function() {
     } else {
         // Если товара нет в корзине, добавляем новый товар
         addNewProductToCart(productId);
-    }
+    }   
 });
+
+
+
+
+
 
 // Функция для обновления количества товара в корзине
 async function updateProductQuantity(productId) {
@@ -162,9 +171,31 @@ async function addNewProductToCart(productId) {
 
         const newItem = await response.json();
         console.log('Новый товар добавлен:', newItem);
+        
     } catch (error) {
         console.error('Ошибка при добавлении товара:', error);
     }
 }
+
+
+// Считаем общее кол-во товаров
+orderButton.addEventListener('click', async () => {
+        try {
+            const response = await fetch('http://localhost:3000/cart'); 
+            const products = await response.json();
+
+            let totalQuantity = 0;
+            for (let i = 0; i < products.length; i++) {
+                // Преобразуем строку в число
+                totalQuantity += parseInt(products[i].quantity);
+            }
+
+            console.log(`Общее количество товаров: ${totalQuantity}`);
+        } catch (error) {
+            console.error('Произошла ошибка:', error);
+            alert('Не удалось получить данные. Проверьте соединение с сервером.');
+        }
+    });
+
 
 // Карточки товара end
